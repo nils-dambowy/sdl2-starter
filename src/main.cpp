@@ -15,8 +15,8 @@ enum KeyPressSurface{
 };
 
 // Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 800;
 
 // Init window & surface
 SDL_Window* gWindow = NULL;
@@ -31,8 +31,6 @@ SDL_Surface* loadSurface( std::string path){
 
     // Load image at an specified path
     SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
-
-
     if( loadedSurface == NULL ){
         printf("Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError());
     }
